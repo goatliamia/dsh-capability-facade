@@ -28,9 +28,21 @@ export const inject = ['tools']
 export function apply(ctx) {
   record({ event: 'mount' })
   ctx.on('tools/result', (exec, result) => {
+    // Arguments are recorded as a compact string: the scale experiment needs to
+    // see WHICH sub-tool a meta tool was asked to reach, and what the model
+    // typed when it picked one. Never the whole live execution object.
+    let args = ''
+    try {
+      const raw = exec?.arguments
+      args = typeof raw === 'string' ? raw : JSON.stringify(raw ?? null)
+      if (args !== null && args.length > 300) args = args.slice(0, 300) + '…'
+    } catch {
+      args = '(unserializable)'
+    }
     record({
       event: 'call',
       tool: String(exec?.name ?? ''),
+      args,
       nested: exec?.parent !== undefined,
       callId: exec?.callId === undefined ? null : String(exec.callId),
       isError: result?.isError === true,

@@ -1,0 +1,57 @@
+{
+ "arm": "sc-facade",
+ "samples": [
+  {
+   "stage": "agent/created",
+   "payloadKeys": "agent",
+   "agentKeys": "loopCtx,id,options,session,inbox,phase,activityDone,scope,ctx,dispatch,requestHeaderLogged,requestSurfaceGeneration"
+  },
+  {
+   "stage": "agent/created+delay",
+   "count": 40,
+   "bytes": 31040,
+   "names": [
+    "browser_fill",
+    "browser_inspect",
+    "cloud_inspect",
+    "cloud_publish",
+    "create_goal",
+    "db_backup",
+    "db_explore",
+    "edit",
+    "exit_plan_mode",
+    "get_goal",
+    "git_commit",
+    "git_inspect",
+    "glob",
+    "grep",
+    "image_analyze",
+    "image_transform",
+    "interrupt_agent",
+    "job_kill",
+    "job_list",
+    "job_output",
+    "list_agents",
+    "pdf_analyze",
+    "pdf_convert",
+    "pwsh",
+    "ralph",
+    "read",
+    "read_image",
+    "send_message",
+    "skill",
+    "subagent",
+    "subagent_fork",
+    "todo_write",
+    "update_goal",
+    "web_fetch",
+    "web_inspect",
+    "web_search",
+    "workflow",
+    "workspace_archive",
+    "workspace_survey",
+    "write"
+   ]
+  }
+ ]
+}

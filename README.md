@@ -256,6 +256,22 @@ pwsh -File experiments/ab-make/ab-make.ps1
 收窄省掉的是"在 6 个名字里选哪个、按什么顺序组合"的**认知成本**，不是工作成本。
 报告：[`experiments/ab-narrow/REPORT.md`](experiments/ab-narrow/REPORT.md)。
 
+### 6. 规模实验：157 个底层工具下的 Raw / ToolSearch / Facade
+
+前几组实验都在 6 个工具的世界里，社区的真实规模是 178–1000 个工具（#2588 / #2137）。
+`experiments/scale/` 构造了一个 157 工具的真实规格池，三臂对照：
+
+| 臂 | 可见工具 | schema 字节 | 完成任务调用 | 根调用 |
+| --- | ---: | ---: | ---: | ---: |
+| `raw` | **182** | 54,310 | 2 | 2 |
+| `search`（search→call） | **27** | 26,680 | 4 | 4 |
+| `facade`（15 个语义操作） | **40** | 31,040 | 2 | 2 |
+
+**结论**：ToolSearch 与 Facade **解决不同问题**——前者适合"能力空间巨大、关系不确定"，
+用每轮多一次往返换掉 51% 的 schema；后者适合"内部关系稳定、重复组合明显"，
+在不增加往返的前提下省 43% 的 schema。两者可叠加（先由作者组合，再由 search 管理长尾）。
+报告：[`experiments/scale/REPORT.md`](experiments/scale/REPORT.md)。
+
 ## 仓库结构
 
 | 路径 | 内容 |

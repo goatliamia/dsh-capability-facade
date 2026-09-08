@@ -1,0 +1,17 @@
+{
+  "name": "dsh-surface-measure",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test-only: writes the model-facing tool surface (count + bytes) to a file on mount.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

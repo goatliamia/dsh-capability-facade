@@ -1,0 +1,17 @@
+{
+  "name": "dsh-scale-pool",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experiment: a realistic large tool surface (one plugin, many domain tools).",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

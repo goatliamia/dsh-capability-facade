@@ -1,0 +1,17 @@
+{
+  "name": "dsh-scale-facade",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experiment arm 'facade': the same pool, registered but NOT model-facing, behind declared semantic operations.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

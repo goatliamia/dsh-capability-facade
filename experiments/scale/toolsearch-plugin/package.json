@@ -1,0 +1,17 @@
+{
+  "name": "dsh-scale-toolsearch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experiment arm 'toolsearch': the same pool behind search → call, the community answer to 100+ tools.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

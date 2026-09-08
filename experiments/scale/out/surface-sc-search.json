@@ -1,0 +1,45 @@
+{
+ "arm": "sc-search",
+ "samples": [
+  {
+   "stage": "agent/created",
+   "count": 27,
+   "bytes": 26680,
+   "names": [
+    "create_goal",
+    "edit",
+    "exit_plan_mode",
+    "get_goal",
+    "glob",
+    "grep",
+    "interrupt_agent",
+    "job_kill",
+    "job_list",
+    "job_output",
+    "list_agents",
+    "pool_call",
+    "pool_search",
+    "pwsh",
+    "ralph",
+    "read",
+    "read_image",
+    "send_message",
+    "skill",
+    "subagent",
+    "subagent_fork",
+    "todo_write",
+    "update_goal",
+    "web_fetch",
+    "web_search",
+    "workflow",
+    "write"
+   ]
+  },
+  {
+   "stage": "tools/change",
+   "count": 0,
+   "bytes": 2,
+   "names": []
+  }
+ ]
+}

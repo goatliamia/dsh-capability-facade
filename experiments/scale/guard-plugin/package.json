@@ -1,0 +1,17 @@
+{
+  "name": "dsh-pool-guard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test-only: deny shell access to the experiment's loopback pool upstream, so the pool is the only path.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
