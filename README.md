@@ -242,6 +242,20 @@ pwsh -File experiments/ab-make/ab-make.ps1
 正确性也不变——它换掉的是"谁负责编排"，不是"模型更聪明"。
 报告（含 N=1 与编排路径不稳定的诚实标注）：[`experiments/ab-make/REPORT.md`](experiments/ab-make/REPORT.md)。
 
+### 5. A/B：真正收窄（6 → 1）改变了什么
+
+`experiments/ab-narrow/` 让一个插件**只注册一个** `maker_check`（内部直接调用 maker 的纯函数），
+与 maker 现状（6 个工具）对比：
+
+| 任务 | an-wide（6 个工具） | an-narrow（1 个工具） |
+| --- | --- | --- |
+| 严格任务（只调一次、别做别的） | 1 次调用 | **1 次调用** |
+| 宽松任务（检查并说清要修什么） | 2 次调用 | 26 次（调完 `maker_check` 后用 pwsh/read/grep 自己深挖） |
+
+**结论**：surface 变小**不等于**调用变少；严格任务下两臂同为 1 次。
+收窄省掉的是"在 6 个名字里选哪个、按什么顺序组合"的**认知成本**，不是工作成本。
+报告：[`experiments/ab-narrow/REPORT.md`](experiments/ab-narrow/REPORT.md)。
+
 ## 仓库结构
 
 | 路径 | 内容 |
@@ -255,7 +269,7 @@ pwsh -File experiments/ab-make/ab-make.ps1
 | `scripts/analyze-plugin.mjs` | `analyze` 的 CLI。 |
 | `scripts/verify-plugin.ps1` | `verify` 的隔离验证脚本。 |
 | `docs/` | 设计评审、约束证据、重构协议评审。 |
-| `experiments/` | 三臂实验 + `rewrite/` 改写实验 + `ab-make/` A/B（脚本 / 审计日志 / 报告）。 |
+| `experiments/` | 三臂实验 + `rewrite/` 改写实验 + `ab-make/` 与 `ab-narrow/` 两组 A/B（脚本 / 审计日志 / 报告）。 |
 
 ## 复现
 

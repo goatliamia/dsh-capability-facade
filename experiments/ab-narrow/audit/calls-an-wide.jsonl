@@ -1,0 +1,3 @@
+{"arm":"an-wide","event":"mount"}
+{"arm":"an-wide","event":"call","tool":"plugin_maker_check","nested":false,"callId":"call_00_rMX3KdANrAyMAMcdLe7T2278","isError":false,"rootCallId":"call_00_rMX3KdANrAyMAMcdLe7T2278"}
+{"arm":"an-wide","event":"call","tool":"plugin_maker_vet","nested":false,"callId":"call_01_twhlQLvcOXPdvY7gdOiN0320","isError":false,"rootCallId":"call_01_twhlQLvcOXPdvY7gdOiN0320"}

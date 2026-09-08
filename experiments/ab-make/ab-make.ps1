@@ -91,8 +91,9 @@ foreach ($arm in @(@{ name = 'ab-raw'; cap = $false }, @{ name = 'ab-cap'; cap =
   $env:AUDIT_ARM = $arm.name
   $run = Invoke-Dsh @('--profile', $arm.name, $Task)
   ($run.text -split "`n" | Where-Object { $_.Trim() -ne '' } | Select-Object -Last 4) -join "`n"
-  $calls = if (Test-Path $auditFile) { (Get-Content $auditFile | Where-Object { $_ -match '"event":"call"' }).Count } else { 0 }
-  $tools = if (Test-Path $auditFile) { (Get-Content $auditFile | ConvertFrom-Json | Where-Object { $_.event -eq 'call' } | Select-Object -ExpandProperty tool) -join ',' } else { '' }
+  $callRows = if (Test-Path $auditFile) { @(Get-Content $auditFile | ConvertFrom-Json | Where-Object { $_.event -eq 'call' }) } else { @() }
+  $calls = $callRows.Count
+  $tools = (($callRows.tool | Sort-Object -Unique) -join ',')
   Write-Host "  exit=$($run.code) calls=$calls tools=[$tools]"
   $results += [pscustomobject]@{ arm = $arm.name; capability = $arm.cap; exit = $run.code; calls = $calls; tools = $tools }
   # tear down the throwaway profile
