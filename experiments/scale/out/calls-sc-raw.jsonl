@@ -1,3 +1,1 @@
 {"arm":"sc-raw","event":"mount"}
-{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"C:\\\\temp\\\\report.pdf\"}","nested":false,"callId":"call_00_ET_xKUl70iXjb5LkrWk7k7R8257","isError":false,"rootCallId":"call_00_ET_xKUl70iXjb5LkrWk7k7R8257"}
-{"arm":"sc-raw","event":"call","tool":"git_branch","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\plugins\\\\dsh-plugin-maker\"}","nested":false,"callId":"call_01_ET_ItkzYfvcbRCTlYwKCAYl3018","isError":false,"rootCallId":"call_01_ET_ItkzYfvcbRCTlYwKCAYl3018"}

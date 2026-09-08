@@ -1,0 +1,4 @@
+{"arm":"sc-raw","event":"mount"}
+{"arm":"sc-raw","event":"call","tool":"cloud_list_functions","args":"{}","nested":false,"callId":"call_00_IikFeivUq4ze2h5hLRVe7346","isError":false,"rootCallId":"call_00_IikFeivUq4ze2h5hLRVe7346"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"service\",\"limit\":1000}","nested":false,"callId":"call_01_Z3wchViasBQrxie4TFaW6225","isError":false,"rootCallId":"call_01_Z3wchViasBQrxie4TFaW6225"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"limit\":1000,\"service\":\"api\"}","nested":false,"callId":"call_00_cUx21IcaY2xOaRuDaMJK8779","isError":false,"rootCallId":"call_00_cUx21IcaY2xOaRuDaMJK8779"}

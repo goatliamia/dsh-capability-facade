@@ -1,0 +1,4 @@
+{"arm":"sc-facade","event":"mount"}
+{"arm":"sc-facade","event":"call","tool":"pdf_analyze","args":"{\"path\":\"document report.pdf\"}","nested":false,"callId":"call_00_XRxWN4JMrVohvlt5v5dg0447","isError":false,"rootCallId":"call_00_XRxWN4JMrVohvlt5v5dg0447"}
+{"arm":"sc-facade","event":"call","tool":"pdf_analyze","args":"{\"path\":\"report.pdf\"}","nested":false,"callId":"call_01_JDQqQKXH6qtoZi8xHvVJ9783","isError":false,"rootCallId":"call_01_JDQqQKXH6qtoZi8xHvVJ9783"}
+{"arm":"sc-facade","event":"call","tool":"pdf_analyze","args":"{\"path\":\"document.pdf\"}","nested":false,"callId":"call_02_wqJE9vKdgNn8Ez4g264Z1917","isError":false,"rootCallId":"call_02_wqJE9vKdgNn8Ez4g264Z1917"}

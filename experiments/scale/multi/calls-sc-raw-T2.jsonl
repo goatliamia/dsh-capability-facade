@@ -1,0 +1,5 @@
+{"arm":"sc-raw","event":"mount"}
+{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"document locked.pdf\"}","nested":false,"callId":"call_00_mefjmK7uc5Cbz3emQ5lR1016","isError":false,"rootCallId":"call_00_mefjmK7uc5Cbz3emQ5lR1016"}
+{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"document_locked.pdf\"}","nested":false,"callId":"call_01_v9VFsZ9X1h2kLYusGpp86093","isError":false,"rootCallId":"call_01_v9VFsZ9X1h2kLYusGpp86093"}
+{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"locked document.pdf\"}","nested":false,"callId":"call_02_5ALrXfWgTuDj7ha9CTVd3482","isError":false,"rootCallId":"call_02_5ALrXfWgTuDj7ha9CTVd3482"}
+{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"document locked\"}","nested":false,"callId":"call_03_3tsQBaCdg03XSOKejLcz8213","isError":false,"rootCallId":"call_03_3tsQBaCdg03XSOKejLcz8213"}

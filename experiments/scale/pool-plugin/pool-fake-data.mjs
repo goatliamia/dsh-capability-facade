@@ -1,38 +1,40 @@
 /**
  * Deterministic results for the pool tools — the scale experiment's ground truth.
  *
- * The values are served by a local mock HTTP server (`http://127.0.0.1:8791`),
- * which is what makes the pool the ONLY path to the answer:
+ * Values come from a local mock HTTP server (`http://127.0.0.1:8791`), which is
+ * what makes the pool the only path to the answer:
  *   - the built-in `web_fetch` refuses loopback addresses (SSRF guard),
- *   - the `pwsh` shortcut is blocked by a tool guard while this experiment runs.
+ *   - a guard plugin blocks the `pwsh` shortcut while the experiment runs.
  *
- * The pool tools fetch from that server, so the numbers in a transcript prove
- * which tool produced them. If the server is unreachable the tool says so
- * instead of inventing a value.
+ * The `path` argument of a call selects a server endpoint, so one tool can
+ * answer different questions (`git_branch repo=diverged`, `pdf_page_count
+ * path=report/encrypted`). That is what lets the multi-task experiment ask
+ * "does this operation's fixed pipeline cover THIS case?".
  */
 
 const BASE = process.env.POOL_BASE_URL ?? 'http://127.0.0.1:8791'
 
-/** Plausible values by tool-name suffix, most specific first. */
-const RULES = [
-  [/^pdf_page_count$/, { endpoint: '/report', field: 'pages' }],
-  [/^pdf_metadata$/, { endpoint: '/report', field: null }],
-  [/^pdf_extract_text$/, { endpoint: '/report', field: null }],
-  [/^pdf_layout$/, { endpoint: '/report', field: 'blocks' }],
-  [/^git_branch$/, { endpoint: '/repo', field: 'branch' }],
-  [/^git_log$/, { endpoint: '/repo', field: null }],
-  [/^git_status$/, { endpoint: '/repo', field: null }],
-  [/^git_show$/, { endpoint: '/repo', field: null }],
+/** Which endpoint a call should read, by tool name. */
+const ROUTES = [
+  [/^pdf_page_count$/, (args) => `/report${path(args.path)}`],
+  [/^pdf_metadata$/, (args) => `/report${path(args.path)}`],
+  [/^pdf_extract_text$/, (args) => `/report${path(args.path)}`],
+  [/^pdf_layout$/, (args) => `/report${path(args.path)}`],
+  [/^git_branch$/, (args) => `/repo${path(args.repo)}`],
+  [/^git_log$/, (args) => `/repo${path(args.repo)}`],
+  [/^git_status$/, (args) => `/repo${path(args.repo)}`],
+  [/^git_diff$/, (args) => `/repo${path(args.repo)}`],
+  [/^git_show$/, (args) => `/repo${path(args.repo)}`],
+  [/^db_query$/, () => '/logs'],
+  [/^cloud_logs$/, () => '/logs'],
+  [/^cloud_metrics$/, () => '/logs'],
+  [/^fs_read$/, () => '/config'],
 ]
 
-/** Static fallbacks for tools with no server mapping. */
-const STATIC = {
-  db_query: { rows: [{ id: 1 }], rowCount: 1 },
-  db_tables: { tables: ['users', 'orders'] },
-  image_info: { width: 800, height: 600, format: 'png' },
-  net_status: { status: 200 },
-  fs_tree: { entries: 8 },
-  cloud_logs: { lines: ['INFO started', 'INFO ready'] },
+/** Turn a tool argument into an endpoint path (`'diverged'` -> `/diverged`). */
+function path(value) {
+  const text = String(value ?? '').trim().replace(/^\/+/, '')
+  return text === '' ? '' : `/${text}`
 }
 
 async function fetchJson(endpoint) {
@@ -44,17 +46,18 @@ async function fetchJson(endpoint) {
 /**
  * The result one pool tool returns for one call.
  * @param {string} name tool name
+ * @param {object} args call arguments
  * @returns {Promise<object>} a deterministic value
  */
-export async function fakeResult(name) {
-  for (const [pattern, mapping] of RULES) {
+export async function fakeResult(name, args = {}) {
+  for (const [pattern, route] of ROUTES) {
     if (!pattern.test(name)) continue
+    const endpoint = route(args)
     try {
-      const payload = await fetchJson(mapping.endpoint)
-      return mapping.field === null ? payload : { [mapping.field]: payload[mapping.field] }
+      return await fetchJson(endpoint)
     } catch (error) {
       return { ok: false, error: `pool upstream unavailable: ${String((error && error.message) || error)}` }
     }
   }
-  return STATIC[name] ?? { ok: true, note: 'no fixture value for this tool' }
+  return { ok: true, note: 'no fixture value for this tool' }
 }

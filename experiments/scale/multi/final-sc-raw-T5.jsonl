@@ -1,0 +1,11 @@
+{"arm":"sc-raw","event":"mount"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\"}","nested":false,"callId":"call_00_2M9aXE4tbpSjdeONNezC2605","isError":false,"rootCallId":"call_00_2M9aXE4tbpSjdeONNezC2605"}
+{"arm":"sc-raw","event":"call","tool":"git_branch","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\"}","nested":false,"callId":"call_01_uAkZTamImqwnRVELntPb7114","isError":false,"rootCallId":"call_01_uAkZTamImqwnRVELntPb7114"}
+{"arm":"sc-raw","event":"call","tool":"fs_list","args":"{\"path\":\"C:\\\\Users\\\\14100\\\\Documents\"}","nested":false,"callId":"call_00_6jyrJg8SurbM120IKNxF5857","isError":false,"rootCallId":"call_00_6jyrJg8SurbM120IKNxF5857"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\diverged\"}","nested":false,"callId":"call_00_bZzcGjAbTaPra2uUVVne6791","isError":false,"rootCallId":"call_00_bZzcGjAbTaPra2uUVVne6791"}
+{"arm":"sc-raw","event":"call","tool":"git_branch","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\diverged\"}","nested":false,"callId":"call_01_SzSzgFA6FmruD1ig6BR82133","isError":false,"rootCallId":"call_01_SzSzgFA6FmruD1ig6BR82133"}
+{"arm":"sc-raw","event":"call","tool":"glob","args":"{\"pattern\":\"**/.git/HEAD\"}","nested":false,"callId":"call_02_bdcSyHUEV0VGH5oxLCjU5424","isError":false,"rootCallId":"call_02_bdcSyHUEV0VGH5oxLCjU5424"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\repo\"}","nested":false,"callId":"call_00_n57faTQFPCEi6AtPCcuC7117","isError":false,"rootCallId":"call_00_n57faTQFPCEi6AtPCcuC7117"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\project\"}","nested":false,"callId":"call_01_uNlE0ZAcWGuISNSfYRlN9181","isError":false,"rootCallId":"call_01_uNlE0ZAcWGuISNSfYRlN9181"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\".\"}","nested":false,"callId":"call_02_6oniT1b9WdKFmbuNjyY14626","isError":false,"rootCallId":"call_02_6oniT1b9WdKFmbuNjyY14626"}
+{"arm":"sc-raw","event":"call","tool":"git_status","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_03_VRe0Y5GdupdPXEGCr3974655","isError":false,"rootCallId":"call_03_VRe0Y5GdupdPXEGCr3974655"}

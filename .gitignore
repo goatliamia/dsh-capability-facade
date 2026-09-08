@@ -4,3 +4,4 @@ experiments/audit/calls.jsonl
 .DS_Store
 calls.jsonl
 experiments/scale/out/surface-debug.json
+surface.json

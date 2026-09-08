@@ -207,7 +207,7 @@ export const FACADE_OPERATIONS = [
     id: 'git',
     description: 'Inspect and change one repository.',
     operations: [
-      { name: 'inspect', description: 'Status, recent history and current diff of a repository in one call.', parameters: { repo: { type: 'string', required: true } }, steps: [{ tool: 'git_status' }, { tool: 'git_log' }, { tool: 'git_diff' }] },
+      { name: 'inspect', description: 'Status, recent history and current diff of a repository in one call.', parameters: { repo: { type: 'string', required: true } }, steps: [{ tool: 'git_status', from: 'repo' }, { tool: 'git_log', from: 'repo' }, { tool: 'git_diff', from: 'repo' }] },
       { name: 'commit', description: 'Stage the given paths and commit them with a message.', parameters: { repo: { type: 'string', required: true }, paths: { type: 'array', items: { type: 'string' } }, message: { type: 'string', required: true } }, steps: [{ tool: 'git_add' }, { tool: 'git_commit' }] },
     ],
   },

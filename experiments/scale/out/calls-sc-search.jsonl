@@ -1,5 +1,1 @@
 {"arm":"sc-search","event":"mount"}
-{"arm":"sc-search","event":"call","tool":"pool_search","args":"{\"query\":\"pdf page count\",\"limit\":8}","nested":false,"callId":"call_00_4clhks7aGfZvo9B5bjjT6364","isError":false,"rootCallId":"call_00_4clhks7aGfZvo9B5bjjT6364"}
-{"arm":"sc-search","event":"call","tool":"pool_search","args":"{\"query\":\"git branch current repository\",\"limit\":8}","nested":false,"callId":"call_01_jcAYTBkmRmldwwlR4TUM8105","isError":false,"rootCallId":"call_01_jcAYTBkmRmldwwlR4TUM8105"}
-{"arm":"sc-search","event":"call","tool":"pool_call","args":"{\"name\":\"pdf_page_count\",\"arguments\":{\"path\":\"C:\\\\temp\\\\report.pdf\"}}","nested":false,"callId":"call_00_jhTQ3UmP21a9uOUhP8kT0680","isError":false,"rootCallId":"call_00_jhTQ3UmP21a9uOUhP8kT0680"}
-{"arm":"sc-search","event":"call","tool":"pool_call","args":"{\"name\":\"git_branch\",\"arguments\":{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\plugins\\\\dsh-plugin-maker\"}}","nested":false,"callId":"call_01_LVZQw41coRWhFVNlURBN2038","isError":false,"rootCallId":"call_01_LVZQw41coRWhFVNlURBN2038"}

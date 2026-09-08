@@ -1,12 +1,12 @@
 /**
  * Experiment arm "facade": semantic operations only, primitives never registered.
  *
- * The pool's behavior is identical to the other arms (every step returns the
- * same `{ tool, domain, got }` shape), but the primitives stay plain functions.
- * That is forced by a measured constraint: the facade's operations dispatch
- * through `ctx.tools.execute()`, so any step tool that exists is also a
- * model-facing tool. The only way to have a narrow surface is to never register
- * the primitives 闁?see docs/constraint-restrict-vs-nested-dispatch.md.
+ * The pool's behavior is identical to the other arms, but the primitives stay
+ * plain functions. That is forced by a measured constraint: the facade's
+ * operations dispatch through `ctx.tools.execute()`, so any step tool that
+ * exists is also a model-facing tool. The only way to have a narrow surface is
+ * to never register the primitives — see
+ * docs/constraint-restrict-vs-nested-dispatch.md.
  */
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import { FACADE_OPERATIONS, POOL } from './pool-spec.mjs'
@@ -24,7 +24,7 @@ const OUTPUT = {
 
 const byName = new Map(POOL.map((tool) => [tool.name, tool]))
 
-/** The pool's implementation 闁?a plain function, never a registered tool. */
+/** The pool's implementation — a plain function, never a registered tool. */
 async function runPoolTool(name, args) {
   const tool = byName.get(name)
   if (tool === undefined) return { ok: false, tool: name, error: `unknown pool tool "${name}"` }
@@ -35,8 +35,10 @@ async function runPoolTool(name, args) {
 function stepArguments(step, operationArguments) {
   const source = operationArguments ?? {}
   if (step.from === undefined) return source
-  const value = source[step.from]
-  return value !== null && typeof value === 'object' ? value : {}
+  // The `from` field may hold ANY value — a string id, a number, an object.
+  // An earlier version wrapped only objects, which silently dropped
+  // `repo: 'diverged'` and made every call read the default endpoint.
+  return { [step.from]: source[step.from] }
 }
 
 export function apply(ctx) {
@@ -49,11 +51,12 @@ export function apply(ctx) {
           name: toolName,
           description: `${operation.description}\n\n[capability ${capability.id}] ${capability.description}\nSteps (run in this order, one call): ${operation.steps
             .map((step, index) => `${index + 1}. ${step.tool}`)
-            .join(' 闁?')}`,
+            .join(' → ')}`,
           parameters: operation.parameters ?? {},
           output: OUTPUT,
           async execute(args) {
-            const steps = []; for (const step of operation.steps) { steps.push(await runPoolTool(step.tool, stepArguments(step, args))) }
+            const steps = []
+            for (const step of operation.steps) steps.push(await runPoolTool(step.tool, stepArguments(step, args)))
             return { ok: steps.every((step) => step.ok), capability: capability.id, operation: operation.name, steps }
           },
         }),

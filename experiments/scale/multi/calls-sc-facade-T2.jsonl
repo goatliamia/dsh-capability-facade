@@ -1,0 +1,2 @@
+{"arm":"sc-facade","event":"mount"}
+{"arm":"sc-facade","event":"call","tool":"pdf_analyze","args":"{\"path\":\"locked.pdf\"}","nested":false,"callId":"call_00_3EtTOnAiy2f8KJalI4AM4405","isError":false,"rootCallId":"call_00_3EtTOnAiy2f8KJalI4AM4405"}

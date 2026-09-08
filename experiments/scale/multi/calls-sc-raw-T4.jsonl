@@ -1,0 +1,9 @@
+{"arm":"sc-raw","event":"mount"}
+{"arm":"sc-raw","event":"call","tool":"cloud_list_functions","args":"{}","nested":false,"callId":"call_00_BMRmbtUCzeLhxTmKnaut5744","isError":false,"rootCallId":"call_00_BMRmbtUCzeLhxTmKnaut5744"}
+{"arm":"sc-raw","event":"call","tool":"cloud_list_instances","args":"{}","nested":false,"callId":"call_01_Ih2ZWAPnBdb2LgRldqfu2333","isError":false,"rootCallId":"call_01_Ih2ZWAPnBdb2LgRldqfu2333"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"service\"}","nested":false,"callId":"call_00_FLyxcKNcx9cfoafey9Uq4886","isError":false,"rootCallId":"call_00_FLyxcKNcx9cfoafey9Uq4886"}
+{"arm":"sc-raw","event":"call","tool":"cloud_list_regions","args":"{}","nested":false,"callId":"call_01_TjmSr2ihrenUDmKWzotB7715","isError":false,"rootCallId":"call_01_TjmSr2ihrenUDmKWzotB7715"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"api\"}","nested":false,"callId":"call_00_K3HFTPAIGXX3CIwAH72T9999","isError":false,"rootCallId":"call_00_K3HFTPAIGXX3CIwAH72T9999"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"web\"}","nested":false,"callId":"call_01_LptglrQfX2YyPKWJSNWb9556","isError":false,"rootCallId":"call_01_LptglrQfX2YyPKWJSNWb9556"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"backend\"}","nested":false,"callId":"call_02_VX8syIGwblSk3fWujvyT7890","isError":false,"rootCallId":"call_02_VX8syIGwblSk3fWujvyT7890"}
+{"arm":"sc-raw","event":"call","tool":"cloud_logs","args":"{\"service\":\"orders\"}","nested":false,"callId":"call_03_829VFQcooqM1VTezXuv68033","isError":false,"rootCallId":"call_03_829VFQcooqM1VTezXuv68033"}

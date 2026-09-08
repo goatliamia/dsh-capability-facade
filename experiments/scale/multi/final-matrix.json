@@ -1,0 +1,107 @@
+﻿[
+    {
+        "arm":  "sc-raw",
+        "task":  "T1",
+        "calls":  90,
+        "tools":  "cloud_list_buckets,fs_list,fs_search,glob,grep,pdf_metadata,pdf_open,pdf_page_count,pwsh,read",
+        "answer":  "2\r"
+    },
+    {
+        "arm":  "sc-raw",
+        "task":  "T2",
+        "calls":  147,
+        "tools":  "browser_snapshot,cloud_download_object,cloud_list_buckets,db_connect,db_query,fs_list,fs_search,glob,grep,image_info,pdf_form_fields,pdf_layout,pdf_metadata,pdf_open,pdf_page_count,pwsh,read,skill",
+        "answer":  "4\r"
+    },
+    {
+        "arm":  "sc-raw",
+        "task":  "T3",
+        "calls":  56,
+        "tools":  "browser_eval,browser_navigate,browser_snapshot,cloud_download_object,cloud_invoke_function,cloud_list_buckets,cloud_list_functions,cloud_list_instances,cloud_list_regions,cloud_logs,cloud_metrics,db_connect,db_query,db_tables,fs_list,fs_search,fs_stat,fs_tree,git_log,git_show,git_status,glob,job_list,list_agents,net_dns,net_http_get,net_port_scan,pdf_metadata,pdf_page_count,pwsh,read,skill,web_fetch,web_search",
+        "answer":  "No such document exists in the accessible capability pool 鈥?nothing na"
+    },
+    {
+        "arm":  "sc-raw",
+        "task":  "T4",
+        "calls":  3,
+        "tools":  "cloud_list_functions,cloud_logs",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-raw",
+        "task":  "T5",
+        "calls":  10,
+        "tools":  "fs_list,git_branch,git_status,glob",
+        "answer":  "Yes 鈥?`diverged` is dirty (`lib/index.js` modified) and is 2 commits a"
+    },
+    {
+        "arm":  "sc-search",
+        "task":  "T1",
+        "calls":  52,
+        "tools":  "pool_call,pool_search",
+        "answer":  "2\r"
+    },
+    {
+        "arm":  "sc-search",
+        "task":  "T2",
+        "calls":  398,
+        "tools":  "pool_call,pool_search",
+        "answer":  "2\r"
+    },
+    {
+        "arm":  "sc-search",
+        "task":  "T3",
+        "calls":  143,
+        "tools":  "pool_call,pool_search",
+        "answer":  "report.pdf\r"
+    },
+    {
+        "arm":  "sc-search",
+        "task":  "T4",
+        "calls":  12,
+        "tools":  "pool_call,pool_search",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-search",
+        "task":  "T5",
+        "calls":  7,
+        "tools":  "pool_call,pool_search",
+        "answer":  "The diverged repo is dirty (1 modified file, lib/index.js), on branch "
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T1",
+        "calls":  106,
+        "tools":  "browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,git_inspect,glob,image_analyze,image_transform,pdf_analyze,pdf_convert,pwsh,web_inspect,workspace_archive,workspace_survey",
+        "answer":  "No number is available: the capability pool\u0027s PDF tool (`pdf_analyze`)"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T2",
+        "calls":  80,
+        "tools":  "browser_fill,browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,glob,grep,image_analyze,pdf_analyze,pdf_convert,pwsh,web_inspect,workspace_archive,workspace_survey",
+        "answer":  "Since the capability pool cannot retrieve the document, any page count"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T3",
+        "calls":  32,
+        "tools":  "browser_fill,browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,git_inspect,glob,image_analyze,pdf_analyze,web_inspect,workspace_archive,workspace_survey",
+        "answer":  "No title available 鈥?the capability pool returned no document report d"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T4",
+        "calls":  1,
+        "tools":  "cloud_inspect",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T5",
+        "calls":  26,
+        "tools":  "git_inspect,glob,workspace_survey",
+        "answer":  "Git capability returns \"not found\" for every repository path I tried ("
+    }
+]

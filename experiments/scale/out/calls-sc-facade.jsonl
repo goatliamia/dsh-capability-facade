@@ -1,3 +1,1 @@
 {"arm":"sc-facade","event":"mount"}
-{"arm":"sc-facade","event":"call","tool":"pdf_analyze","args":"{\"path\":\"C:\\\\temp\\\\report.pdf\"}","nested":false,"callId":"call_00_IR2DtQf2AYV2fm0su8On6823","isError":false,"rootCallId":"call_00_IR2DtQf2AYV2fm0su8On6823"}
-{"arm":"sc-facade","event":"call","tool":"git_inspect","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\\\\plugins\\\\dsh-plugin-maker\"}","nested":false,"callId":"call_01_tJe5XPDe2O3Q40YolIfz8869","isError":false,"rootCallId":"call_01_tJe5XPDe2O3Q40YolIfz8869"}

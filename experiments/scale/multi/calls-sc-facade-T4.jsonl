@@ -1,0 +1,11 @@
+{"arm":"sc-facade","event":"mount"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"api\"}","nested":false,"callId":"call_00_jbu3Yvs8OraOjtBKo0zi2786","isError":false,"rootCallId":"call_00_jbu3Yvs8OraOjtBKo0zi2786"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"web\"}","nested":false,"callId":"call_00_Iiy9lCQjSlE99SMweSDp7913","isError":false,"rootCallId":"call_00_Iiy9lCQjSlE99SMweSDp7913"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"service\"}","nested":false,"callId":"call_01_dKA9EOA145sgo7YYziA81235","isError":false,"rootCallId":"call_01_dKA9EOA145sgo7YYziA81235"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"backend\"}","nested":false,"callId":"call_02_X7uaHoGM1nfXWzPA4V3q8849","isError":false,"rootCallId":"call_02_X7uaHoGM1nfXWzPA4V3q8849"}
+{"arm":"sc-facade","event":"call","tool":"git_inspect","args":"{\"repo\":\"C:\\\\Users\\\\14100\\\\Documents\"}","nested":false,"callId":"call_00_UGt9AsNarGXfYuAC9Oyc0012","isError":false,"rootCallId":"call_00_UGt9AsNarGXfYuAC9Oyc0012"}
+{"arm":"sc-facade","event":"call","tool":"db_explore","args":"{\"id\":\"default\",\"table\":\"services\"}","nested":false,"callId":"call_01_xKR0ureafCXcdbjhrCJ62744","isError":false,"rootCallId":"call_01_xKR0ureafCXcdbjhrCJ62744"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"orders\"}","nested":false,"callId":"call_00_n7rf6Wwtauccx9HLquWT9399","isError":false,"rootCallId":"call_00_n7rf6Wwtauccx9HLquWT9399"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"checkout\"}","nested":false,"callId":"call_01_cB7ePRFYUBeTc5i1UgV28877","isError":false,"rootCallId":"call_01_cB7ePRFYUBeTc5i1UgV28877"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"payments\"}","nested":false,"callId":"call_02_vLI1M67JiRmxbZNd6mxj7000","isError":false,"rootCallId":"call_02_vLI1M67JiRmxbZNd6mxj7000"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"auth\"}","nested":false,"callId":"call_03_4zsF3GpJRFhgFzuCWWuq7409","isError":false,"rootCallId":"call_03_4zsF3GpJRFhgFzuCWWuq7409"}

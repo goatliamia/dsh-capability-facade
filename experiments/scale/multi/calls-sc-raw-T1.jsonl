@@ -1,0 +1,2 @@
+{"arm":"sc-raw","event":"mount"}
+{"arm":"sc-raw","event":"call","tool":"pdf_page_count","args":"{\"path\":\"document report.pdf\"}","nested":false,"callId":"call_00_VKtyyrphtW6ffITo9eU70624","isError":false,"rootCallId":"call_00_VKtyyrphtW6ffITo9eU70624"}

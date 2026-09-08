@@ -272,6 +272,23 @@ pwsh -File experiments/ab-make/ab-make.ps1
 在不增加往返的前提下省 43% 的 schema。两者可叠加（先由作者组合，再由 search 管理长尾）。
 报告：[`experiments/scale/REPORT.md`](experiments/scale/REPORT.md)。
 
+### 7. 多任务实验：哪些操作边界能守住
+
+同一组 15 个语义操作，跑 5 个任务（页数 / 另一资源页数 / 标题 / 日志错误数 / diverged 仓库）：
+
+| 任务 | raw | search | facade |
+| --- | ---: | ---: | ---: |
+| T1 常规页数（操作覆盖） | 1 | 12 | **3** |
+| T2 另一资源页数（操作覆盖） | 4 | 23 | **1** |
+| T3 标题（操作不覆盖） | 48 | 25 | 10 |
+| T4 日志 ERROR（无对应操作） | 8 | 11 | 10 |
+| T5 diverged 仓库（修好参数接线后） | 34 | 138 | **1** |
+
+**结论**：facade 的边界不由任务难度决定，而由**"任务是否需要作者没预见的参数/资源"**决定。
+操作覆盖任务时一次调用搞定；不覆盖时它退化成探索，而且比 raw 更糟（连原语都看不见）。
+报告（含一条作者最易犯的接线错：**声明了参数 ≠ 参数会流到步骤**）：
+[`experiments/scale/MULTI-TASK-REPORT.md`](experiments/scale/MULTI-TASK-REPORT.md)。
+
 ## 仓库结构
 
 | 路径 | 内容 |

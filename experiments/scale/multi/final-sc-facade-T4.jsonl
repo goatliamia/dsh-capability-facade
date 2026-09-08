@@ -1,0 +1,2 @@
+{"arm":"sc-facade","event":"mount"}
+{"arm":"sc-facade","event":"call","tool":"cloud_inspect","args":"{\"service\":\"service\"}","nested":false,"callId":"call_00_efC1LLL3MjjGmN89pgq70504","isError":false,"rootCallId":"call_00_efC1LLL3MjjGmN89pgq70504"}
