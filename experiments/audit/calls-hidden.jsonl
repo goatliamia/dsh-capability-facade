@@ -1,0 +1,5 @@
+{"arm":"hidden","event":"mount"}
+{"arm":"hidden","event":"capability","id":"pdf","operations":["pdf_analyze"],"tools":["pdf_extract","pdf_layout"]}
+{"arm":"hidden","event":"restrict","outcome":"refused","message":"tools.restrict() requires a scoped context (agent.ctx): a context-global restriction would mask every agent — deny the tool for the intended agent instead"}
+{"arm":"hidden","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_c2hsj09H45ySSIbO2gzY9406"}
+{"arm":"hidden","event":"tool","tool":"pdf_layout","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_c2hsj09H45ySSIbO2gzY9406"}

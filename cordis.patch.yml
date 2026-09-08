@@ -1,0 +1,9 @@
+# dsh-capability-facade bundle layer.
+#
+# Inserts one host row: the capability facade service. It publishes no
+# model-facing tool by itself — a capability appears only when a plugin (or a
+# settings file) calls `ctx.capabilities.register(...)`. With nothing declared,
+# this row contributes exactly zero schema and zero prompt cost.
+- insert:
+    - id: dsh-capability-facade
+      name: dsh-capability-facade

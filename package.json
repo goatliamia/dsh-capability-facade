@@ -1,0 +1,44 @@
+{
+  "name": "dsh-capability-facade",
+  "version": "0.1.0",
+  "description": "Model Capability Facade for DSH: a plugin author declares one semantic capability (a few model-facing operations), the facade turns them into typed tools that run a declared pipeline of existing tools through the normal tool pipeline.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --import ./test/loader.mjs test/harness.mjs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "capability",
+    "facade",
+    "tool-surface"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goatliamia/dsh-capability-facade.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goatliamia/dsh-capability-facade/issues"
+  },
+  "homepage": "https://github.com/goatliamia/dsh-capability-facade#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

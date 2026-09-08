@@ -1,0 +1,3 @@
+{"arm":"raw","event":"mount"}
+{"arm":"raw","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":false,"rootCallId":"call_00_Z6kXiHIJAkNxE1q5higk7399"}
+{"arm":"raw","event":"tool","tool":"pdf_layout","path":"C:\\temp\\report.pdf","nested":false,"rootCallId":"call_01_lQ81m6uUaOdrMh8xrBAL4468"}

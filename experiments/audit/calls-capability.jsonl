@@ -1,0 +1,4 @@
+{"arm":"capability","event":"mount"}
+{"arm":"capability","event":"capability","id":"pdf","operations":["pdf_analyze"],"tools":["pdf_extract","pdf_layout"]}
+{"arm":"capability","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_muyrs8wuy2nr1oNgfap10064"}
+{"arm":"capability","event":"tool","tool":"pdf_layout","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_muyrs8wuy2nr1oNgfap10064"}

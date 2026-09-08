@@ -1,0 +1,17 @@
+{
+  "name": "dsh-facade-fixture",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test-only fixture: registers two implementation tools and declares a pdf capability over them.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
