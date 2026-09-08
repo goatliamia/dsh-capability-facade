@@ -148,6 +148,49 @@ console.log('\n# 2. dynamic and unparseable input')
 }
 
 /* ------------------------------------------------------------------ *
+ * 2b. the wrapper shape (regression: a real plugin registered nothing)
+ * ------------------------------------------------------------------ */
+
+console.log('\n# 2b. tools registered through a local wrapper')
+
+{
+  // Real shape from dsh-trajectory-tools: the plugin builds a local
+  // `register(spec)` wrapper that calls defineTool internally, then passes
+  // object literals to it. A `defineTool(`-only scan finds nothing here.
+  const root = await fixture(`
+    export function apply(ctx) {
+      const register = (spec) => { ctx.tools.register(defineTool(spec)) }
+      register({
+        name: 'trajectory_find',
+        description: 'Find events by literal substring.',
+        parameters: { session: { type: 'string' }, query: { type: 'string' } },
+        output: OUT,
+        async execute() { return {} },
+      })
+      register({
+        name: 'trajectory_window',
+        description: 'Read a window of events.',
+        parameters: { session: { type: 'string' }, from: { type: 'integer' }, to: { type: 'integer' } },
+        output: OUT,
+        async execute() { return {} },
+      })
+    }
+  `)
+  const report = await analyzePlugin(root)
+  equal('wrapper-registered tools are found', report.tools.map((tool) => tool.name).sort(), ['trajectory_find', 'trajectory_window'])
+  equal('their parameters are read', report.tools.find((tool) => tool.name === 'trajectory_window').parameters, ['session', 'from', 'to'])
+  equal('they form a candidate group', report.candidates.map((candidate) => candidate.group), ['trajectory'])
+  // An unrelated object literal with a name but no parameters must not match.
+  const noise = await fixture(`
+    export function apply(ctx) {
+      const config = { name: 'not-a-tool', description: 'config object' }
+      ctx.logger.info(config)
+    }
+  `)
+  equal('a name-only object is not mistaken for a tool', (await analyzePlugin(noise)).tools, [])
+}
+
+/* ------------------------------------------------------------------ *
  * 3. existing capability declarations
  * ------------------------------------------------------------------ */
 

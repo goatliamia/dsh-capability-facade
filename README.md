@@ -206,27 +206,45 @@ node scripts/analyze-plugin.mjs <plugin-dir> --propose    # 附一份起步声�
 plugin tree（社区讨论 #5106 / #5237 都是这个现象）。实测：一个故意 `throw` 的插件
 在组合阶段通过、在 boot 阶段被准确拦下。
 
+### 3. 改写实验：我们自己的插件会变成什么样
+
+`experiments/rewrite/` 在**不改任何插件源码**的前提下，对两个自研插件声明 capability 面并测量差异：
+
+| 插件 | 原工具 | 声明的操作 | 结果 |
+| --- | --- | --- | --- |
+| `dsh-plugin-maker` | 6 | `maker_check` = check → vet | 6 + 1；一次调用给出"合规 + 每项改法" |
+| `dsh-trajectory-tools` | 4 | `trajectory_locate` = find → window | 4 + 1；定位 + 取原文窗口一次完成 |
+
+```powershell
+node --import ./test/loader.mjs experiments/rewrite/test.mjs    # 14 项 → OK
+```
+
+结论（详见 [`experiments/rewrite/REPORT.md`](experiments/rewrite/REPORT.md)）：
+**只有真的能合起来回答同一个问题的工具才值得声明成一个操作**——maker 的 6 个工具只合出 1 个；
+硬凑会因参数形状不同而更难用。而且 facade 只加"更好的入口"，不减原语数量。
+
 ## 仓库结构
 
 | 路径 | 内容 |
 | --- | --- |
 | `lib/index.js` | 插件本体（host-only，无运行时依赖）。 |
-| `lib/analyze.mjs` | 只读静态分析器。 |
+| `lib/analyze.mjs` | 只读静态分析器（识别 `defineTool({...})` 与"包装函数 + spec 对象"两种注册形态）。 |
 | `cordis.patch.yml` | profile 挂载的 bundle 行。 |
 | `test/harness.mjs` | 49 条断言，跑在真实注册表上。 |
-| `test/analyze.test.mjs` | 分析器测试（含"一个字节都不写"的证明）。 |
+| `test/analyze.test.mjs` | 分析器测试（含"一个字节都不写"的证明与两种注册形态的回归）。 |
 | `test/loader.mjs` | 仅本工作区用的解析垫片，不随包发布。 |
 | `scripts/analyze-plugin.mjs` | `analyze` 的 CLI。 |
 | `scripts/verify-plugin.ps1` | `verify` 的隔离验证脚本。 |
 | `docs/` | 设计评审、约束证据、重构协议评审。 |
-| `experiments/` | headless 三臂实验：报告、fixture、profile 脚本、审计日志。 |
+| `experiments/` | 三臂实验（报告/fixture/审计）+ `rewrite/` 改写实验（demo 声明/测试/报告）。 |
 
 ## 复现
 
 ```powershell
 # registry 级（不需要 DSH 进程）
 npm test                                    # 49 项 → OK
-node test/analyze.test.mjs                  # 19 项 → OK
+node test/analyze.test.mjs                  # 23 项 → OK
+node --import ./test/loader.mjs experiments/rewrite/test.mjs   # 14 项 → OK
 
 # 分析器（只读）
 node scripts/analyze-plugin.mjs <plugin-dir> --propose

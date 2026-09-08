@@ -16,7 +16,7 @@
     "README.en.md"
   ],
   "scripts": {
-    "test": "node --import ./test/loader.mjs test/harness.mjs && node test/analyze.test.mjs",
+    "test": "node --import ./test/loader.mjs test/harness.mjs && node test/analyze.test.mjs && node --import ./test/loader.mjs experiments/rewrite/test.mjs",
     "analyze": "node scripts/analyze-plugin.mjs"
   },
   "license": "MIT",

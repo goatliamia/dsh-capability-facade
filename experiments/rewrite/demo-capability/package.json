@@ -1,0 +1,17 @@
+{
+  "name": "dsh-capability-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experiment: the same two plugins, with their tool surface declared as semantic capabilities instead of many primitives.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
