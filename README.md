@@ -197,6 +197,7 @@ arm is the boundary working as designed — a host-plane registrant cannot narro
 | `test/loader.mjs` | Test-only resolution shim for this workspace (not shipped). |
 | `docs/DESIGN-REVIEW.md` | Why the direction is right and where its boundary is. |
 | `docs/constraint-restrict-vs-nested-dispatch.md` | The hiding constraint and its three proofs. |
+| `docs/refactor-protocol-review.md` | Review of the follow-on idea ("refactor other plugins into semantic operations"): what is true, what is not, and where it belongs. |
 | `experiments/` | The headless A/B/C experiment: report, fixture, profile setup, audit logs. |
 
 ## Reproduce

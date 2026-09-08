@@ -36,4 +36,4 @@ $env:FACADE_ARM='capability'; dsh --profile facade-test "<task>"
 
 - 不要为了"隐藏工具"去改运行时视野（已被实验否定，见约束文档）；
 - 不要做 `use_capability(capability, operation, input)` 万能入口；
-- 不要把 facade 变成"插件改造器"（那是另一个方向，见 `docs/DESIGN-REVIEW.md` 第六节）。
+- 不要把 facade 变成"插件改造器"（那是另一个方向，见 `docs/refactor-protocol-review.md`）。
