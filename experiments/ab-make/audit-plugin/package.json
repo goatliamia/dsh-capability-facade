@@ -1,0 +1,17 @@
+{
+  "name": "dsh-call-audit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Test-only: append every settled tool call to a JSONL file so an experiment can count what the model actually called.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

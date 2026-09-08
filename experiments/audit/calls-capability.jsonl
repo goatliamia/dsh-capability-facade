@@ -1,4 +1,7 @@
 {"arm":"capability","event":"mount"}
 {"arm":"capability","event":"capability","id":"pdf","operations":["pdf_analyze"],"tools":["pdf_extract","pdf_layout"]}
-{"arm":"capability","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_muyrs8wuy2nr1oNgfap10064"}
-{"arm":"capability","event":"tool","tool":"pdf_layout","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_ET_muyrs8wuy2nr1oNgfap10064"}
+{"arm":"capability","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_NXwlegF7npizS7ZgpGqy7913"}
+{"arm":"capability","event":"tool","tool":"pdf_layout","path":"C:\\temp\\report.pdf","nested":true,"rootCallId":"call_00_NXwlegF7npizS7ZgpGqy7913"}
+{"arm":"capability","event":"tool","tool":"pdf_extract","path":"C:\\temp\\definitely-not-here-12345.pdf","nested":true,"rootCallId":"call_00_iADxsKo6abRSoJOR5xbf9716"}
+{"arm":"capability","event":"tool","tool":"pdf_layout","path":"C:\\temp\\definitely-not-here-12345.pdf","nested":true,"rootCallId":"call_00_iADxsKo6abRSoJOR5xbf9716"}
+{"arm":"capability","event":"tool","tool":"pdf_extract","path":"C:\\temp\\report.pdf","nested":false,"rootCallId":"call_01_BbQZeYBDhoOd5rdMBQRd4157"}

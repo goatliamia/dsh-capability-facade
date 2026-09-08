@@ -1,0 +1,4 @@
+{"arm":"ab-cap","event":"mount"}
+{"arm":"ab-cap","event":"call","tool":"plugin_maker_check","nested":true,"callId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414:maker.check:1","isError":false,"rootCallId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414"}
+{"arm":"ab-cap","event":"call","tool":"plugin_maker_vet","nested":true,"callId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414:maker.check:2","isError":false,"rootCallId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414"}
+{"arm":"ab-cap","event":"call","tool":"maker_check","nested":false,"callId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414","isError":false,"rootCallId":"call_00_ET_ZHlt0MulhqpdyP0ibeLP5414"}

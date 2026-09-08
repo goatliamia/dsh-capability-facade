@@ -223,6 +223,25 @@ node --import ./test/loader.mjs experiments/rewrite/test.mjs    # 14 项 → OK
 **只有真的能合起来回答同一个问题的工具才值得声明成一个操作**——maker 的 6 个工具只合出 1 个；
 硬凑会因参数形状不同而更难用。而且 facade 只加"更好的入口"，不减原语数量。
 
+### 4. A/B：真实插件上模型行为变了什么
+
+`experiments/ab-make/` 用同一个任务、同一份真实 `dsh-plugin-maker`，跑两个一次性 profile：
+
+| 臂 | 模型可见的 maker 工具 | 根调用（模型轮次） | 结果 |
+| --- | --- | --- | --- |
+| `ab-raw` | 6 个原语 | **2**（check、vet 各一次） | 结论正确 |
+| `ab-cap` | 6 个原语 + `maker_check` | **1**（facade 在一次调用内按序跑完两步） | 同一结论 |
+
+审计插件监听 `tools/result`（嵌套调用也会触发），逐次记录 `tool / nested / rootCallId`。
+
+```powershell
+pwsh -File experiments/ab-make/ab-make.ps1
+```
+
+**结论**：capability 把"两次模型往返"压成"一次"，但**工具数没有下降**（6 → 7），
+正确性也不变——它换掉的是"谁负责编排"，不是"模型更聪明"。
+报告（含 N=1 与编排路径不稳定的诚实标注）：[`experiments/ab-make/REPORT.md`](experiments/ab-make/REPORT.md)。
+
 ## 仓库结构
 
 | 路径 | 内容 |
@@ -236,7 +255,7 @@ node --import ./test/loader.mjs experiments/rewrite/test.mjs    # 14 项 → OK
 | `scripts/analyze-plugin.mjs` | `analyze` 的 CLI。 |
 | `scripts/verify-plugin.ps1` | `verify` 的隔离验证脚本。 |
 | `docs/` | 设计评审、约束证据、重构协议评审。 |
-| `experiments/` | 三臂实验（报告/fixture/审计）+ `rewrite/` 改写实验（demo 声明/测试/报告）。 |
+| `experiments/` | 三臂实验 + `rewrite/` 改写实验 + `ab-make/` A/B（脚本 / 审计日志 / 报告）。 |
 
 ## 复现
 
