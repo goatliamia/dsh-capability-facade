@@ -2,10 +2,10 @@
     {
         "arm":  "sc-facade",
         "task":  "T3",
-        "calls":  37,
-        "errors":  0,
-        "tools":  "browser_fill,browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,git_inspect,glob,image_analyze,image_transform,pdf_analyze,pdf_convert,web_fetch,web_inspect,web_search,workspace_archive,workspace_survey",
-        "answer":  "report.pdf\r"
+        "calls":  38,
+        "errors":  1,
+        "tools":  "browser_fill,browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,git_commit,git_inspect,glob,image_analyze,image_transform,pdf_analyze,pdf_convert,skill,web_fetch,web_inspect,workspace_archive,workspace_survey",
+        "answer":  "No title exists — the capability pool contains no document report (every document-related "
     },
     {
         "arm":  "sc-facade",
@@ -18,17 +18,17 @@
     {
         "arm":  "sc-facade",
         "task":  "T5",
-        "calls":  2,
+        "calls":  3,
         "errors":  0,
-        "tools":  "git_inspect",
-        "answer":  "Dirty (lib/index.js modified), 2 commits ahead and 3 behind upstream on `feature/x`.\r"
+        "tools":  "git_inspect,glob",
+        "answer":  "Yes — the `diverged` repository is dirty (`lib/index.js` modified, branch `feature/x`), 2 "
     },
     {
         "arm":  "sc-exit",
         "task":  "T3",
-        "calls":  31,
+        "calls":  45,
         "errors":  0,
-        "tools":  "glob,grep,pool_primitive,workspace_survey",
+        "tools":  "pool_primitive",
         "answer":  "report.pdf\r"
     },
     {
@@ -36,63 +36,87 @@
         "task":  "T4",
         "calls":  null,
         "errors":  0,
-        "tools":  "pool_primitive",
+        "tools":  "cloud_inspect",
         "answer":  "1\r"
     },
     {
         "arm":  "sc-exit",
         "task":  "T5",
-        "calls":  5,
+        "calls":  12,
         "errors":  0,
         "tools":  "git_inspect,pool_primitive",
-        "answer":  "Dirty: yes (lib/index.js modified) — branch feature/x at abc1234 is 2 commits ahead and 3 "
+        "answer":  "Yes — the diverged repo (branch `feature/x`) is dirty (`lib/index.js` modified) and is 2 c"
     },
     {
         "arm":  "sc-signal",
         "task":  "T3",
-        "calls":  7,
+        "calls":  71,
         "errors":  0,
-        "tools":  "glob,pool_primitive,workspace_survey",
-        "answer":  "- With file reading disallowed, I have no sanctioned path to the title, and I won\u0027t fabric"
+        "tools":  "glob,pdf_analyze,pool_primitive,workspace_survey",
+        "answer":  "report.pdf\r"
     },
     {
         "arm":  "sc-signal",
         "task":  "T4",
-        "calls":  3,
+        "calls":  null,
+        "errors":  0,
+        "tools":  "cloud_inspect",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-signal",
+        "task":  "T5",
+        "calls":  5,
+        "errors":  0,
+        "tools":  "git_inspect,pool_primitive",
+        "answer":  "Yes — the `diverged` repo (branch `feature/x`) is dirty (`lib/index.js` modified), 2 commi"
+    },
+    {
+        "arm":  "sc-find",
+        "task":  "T3",
+        "calls":  15,
+        "errors":  0,
+        "tools":  "pool_primitive",
+        "answer":  "**report.pdf**\r"
+    },
+    {
+        "arm":  "sc-find",
+        "task":  "T4",
+        "calls":  2,
         "errors":  0,
         "tools":  "cloud_inspect,pool_primitive",
         "answer":  "1\r"
     },
     {
-        "arm":  "sc-signal",
+        "arm":  "sc-find",
         "task":  "T5",
-        "calls":  32,
+        "calls":  6,
         "errors":  0,
         "tools":  "git_inspect,pool_primitive",
-        "answer":  "Yes — the `diverged` repo (branch `feature/x`, HEAD `abc1234`) is dirty (`lib/index.js`), "
+        "answer":  "Yes — repo `diverged` (branch `feature/x`, HEAD `abc1234`) is dirty (`lib/index.js` modifi"
     },
     {
-        "arm":  "sc-find",
+        "arm":  "sc-rename",
         "task":  "T3",
-        "calls":  20,
+        "calls":  13,
         "errors":  0,
         "tools":  "pool_primitive",
         "answer":  "report.pdf\r"
     },
     {
-        "arm":  "sc-find",
+        "arm":  "sc-rename",
         "task":  "T4",
-        "calls":  7,
+        "calls":  6,
         "errors":  0,
         "tools":  "pool_primitive",
         "answer":  "1\r"
     },
     {
-        "arm":  "sc-find",
+        "arm":  "sc-rename",
         "task":  "T5",
-        "calls":  11,
+        "calls":  7,
         "errors":  0,
-        "tools":  "git_inspect,pool_primitive,workspace_survey",
-        "answer":  "Yes — repo `diverged` (branch `feature/x` @ abc1234) is dirty (`lib/index.js`), 2 commits "
+        "tools":  "git_inspect,pool_primitive",
+        "answer":  "Yes — the diverged repository (`feature/x` @ `abc1234`) is dirty (`lib/index.js` modified)"
     }
 ]

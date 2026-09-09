@@ -1,0 +1,17 @@
+{
+    "name":  "dsh-scale-facade-rename",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "Experiment arm: operations whose resource parameter is named `resource` instead of `path`.",
+    "type":  "module",
+    "main":  "index.mjs",
+    "exports":  {
+                    ".":  "./index.mjs",
+                    "./package.json":  "./package.json"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           }
+            }
+}

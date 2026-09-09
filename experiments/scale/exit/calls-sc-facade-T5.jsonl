@@ -1,3 +1,4 @@
 {"arm":"sc-facade-T5","event":"mount"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_iUv7e1NHwOLIODqN22oz6039","isError":false,"rootCallId":"call_00_iUv7e1NHwOLIODqN22oz6039"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"D:\\\\projects\\\\plugin tool\"}","nested":false,"callId":"call_01_INy3RrHqRlatJ0z7IgjV6825","isError":false,"rootCallId":"call_01_INy3RrHqRlatJ0z7IgjV6825"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"D:\\\\projects\\\\plugin tool\"}","nested":false,"callId":"call_00_j835lJcftdzFqvEivwFN4351","isError":false,"rootCallId":"call_00_j835lJcftdzFqvEivwFN4351"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_X2Ah5NaFJJKSsy0nbLJk4443","isError":false,"rootCallId":"call_00_X2Ah5NaFJJKSsy0nbLJk4443"}
+{"arm":"sc-facade-T5","event":"call","tool":"glob","args":"{\"pattern\":\"**/.git/HEAD\"}","nested":false,"callId":"call_01_ye4vBJC7CwaYblAFxAiP9332","isError":false,"rootCallId":"call_01_ye4vBJC7CwaYblAFxAiP9332"}

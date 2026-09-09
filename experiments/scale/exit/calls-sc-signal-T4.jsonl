@@ -1,4 +1,2 @@
 {"arm":"sc-signal-T4","event":"mount"}
-{"arm":"sc-signal-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"facade-test\"}","nested":false,"callId":"call_00_ltXhqhVBAll6yIgvZJQX6886","isError":false,"rootCallId":"call_00_ltXhqhVBAll6yIgvZJQX6886"}
-{"arm":"sc-signal-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_metrics\",\"arguments\":{\"service\":\"facade-test\"}}","nested":false,"callId":"call_00_zwg0HggxBl5S7tG9ad1v0619","isError":false,"rootCallId":"call_00_zwg0HggxBl5S7tG9ad1v0619"}
-{"arm":"sc-signal-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"facade\"}","nested":false,"callId":"call_01_qtMaoMBOqQYTl70UjgTT8907","isError":false,"rootCallId":"call_01_qtMaoMBOqQYTl70UjgTT8907"}
+{"arm":"sc-signal-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"service\"}","nested":false,"callId":"call_00_t82hvAOYvqyKE9ZKqG769782","isError":false,"rootCallId":"call_00_t82hvAOYvqyKE9ZKqG769782"}
