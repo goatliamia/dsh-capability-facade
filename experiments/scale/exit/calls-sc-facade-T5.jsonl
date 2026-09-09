@@ -1,2 +1,3 @@
 {"arm":"sc-facade-T5","event":"mount"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_KoN6o8Jt5Q7lz0xF3ktH5363","isError":false,"rootCallId":"call_00_KoN6o8Jt5Q7lz0xF3ktH5363"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_iUv7e1NHwOLIODqN22oz6039","isError":false,"rootCallId":"call_00_iUv7e1NHwOLIODqN22oz6039"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"D:\\\\projects\\\\plugin tool\"}","nested":false,"callId":"call_01_INy3RrHqRlatJ0z7IgjV6825","isError":false,"rootCallId":"call_01_INy3RrHqRlatJ0z7IgjV6825"}

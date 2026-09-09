@@ -1,3 +1,2 @@
 {"arm":"sc-exit-T4","event":"mount"}
-{"arm":"sc-exit-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"dsh-capability-facade\"}","nested":false,"callId":"call_00_Bj0MqEUS6cyNCWfkS32T6213","isError":false,"rootCallId":"call_00_Bj0MqEUS6cyNCWfkS32T6213"}
-{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_services\",\"arguments\":{}}","nested":false,"callId":"call_01_5z6Z7TW8oFu7MoVLOW1i2556","isError":false,"rootCallId":"call_01_5z6Z7TW8oFu7MoVLOW1i2556"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_logs\",\"arguments\":{}}","nested":false,"callId":"call_00_C15EDDywDqi8ooatwCyM8499","isError":false,"rootCallId":"call_00_C15EDDywDqi8ooatwCyM8499"}

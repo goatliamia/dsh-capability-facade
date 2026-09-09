@@ -1,2 +1,2 @@
 {"arm":"sc-facade-T4","event":"mount"}
-{"arm":"sc-facade-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"dsh-capability-facade\"}","nested":false,"callId":"call_00_POEdj7dLWfMZ2cwRYF7u2182","isError":false,"rootCallId":"call_00_POEdj7dLWfMZ2cwRYF7u2182"}
+{"arm":"sc-facade-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"facade\"}","nested":false,"callId":"call_00_Dx1YHOXToWRYblb7kOwe5971","isError":false,"rootCallId":"call_00_Dx1YHOXToWRYblb7kOwe5971"}

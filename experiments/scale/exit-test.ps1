@@ -1,4 +1,4 @@
-# exit-test.ps1 — does an escape hatch rescue the facade's uncovered tasks?
+# exit-test.ps1 鈥?does an escape hatch rescue the facade's uncovered tasks?
 #
 # Two arms, same 15 semantic operations over the same 157-tool pool:
 #   sc-facade = operations only        (a closed world)
@@ -69,7 +69,8 @@ function New-Arm([string]$name, [string]$pluginDir, [string]$packageName) {
 $arms = @(
   @{ name = 'sc-facade'; dir = (Join-Path $PSScriptRoot 'facade-plugin');        package = 'dsh-scale-facade' },
   @{ name = 'sc-exit';   dir = (Join-Path $PSScriptRoot 'facade-exit-plugin');   package = 'dsh-scale-facade-exit' },
-  @{ name = 'sc-signal'; dir = (Join-Path $PSScriptRoot 'facade-signal-plugin'); package = 'dsh-scale-facade-signal' }
+  @{ name = 'sc-signal'; dir = (Join-Path $PSScriptRoot 'facade-signal-plugin'); package = 'dsh-scale-facade-signal' },
+  @{ name = 'sc-find';   dir = (Join-Path $PSScriptRoot 'facade-find-plugin');     package = 'dsh-scale-facade-find' }
 )
 $tasks = @(
   @{ id = 'T3'; text = 'Do not read any files. Using ONLY the capability pool: what is the title of document "report"? Answer with the title only.' },
