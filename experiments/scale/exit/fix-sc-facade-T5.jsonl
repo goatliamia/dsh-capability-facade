@@ -1,0 +1,2 @@
+{"arm":"sc-facade-T5","event":"mount"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_OlNXQMGIDZF2gsIkSCnw6211","isError":false,"rootCallId":"call_00_OlNXQMGIDZF2gsIkSCnw6211"}

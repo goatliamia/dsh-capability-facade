@@ -1,5 +1,2 @@
 {"arm":"sc-facade-T5","event":"mount"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"D:\\\\projects\\\\plugin tool\"}","nested":false,"callId":"call_00_bLD71FbSP9UY8XdFTJ5I8199","isError":false,"rootCallId":"call_00_bLD71FbSP9UY8XdFTJ5I8199"}
-{"arm":"sc-facade-T5","event":"call","tool":"workspace_survey","args":"{\"path\":\"D:\\\\projects\\\\plugin tool\",\"pattern\":\".git\"}","nested":false,"callId":"call_00_KwJemgCxXG9t3Gare5YI8723","isError":false,"rootCallId":"call_00_KwJemgCxXG9t3Gare5YI8723"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_S741XCy757bt8lvi7LB05920","isError":false,"rootCallId":"call_00_S741XCy757bt8lvi7LB05920"}
-{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\".\"}","nested":false,"callId":"call_01_oJVdfY5N1oHXIb6StPOT0142","isError":false,"rootCallId":"call_01_oJVdfY5N1oHXIb6StPOT0142"}
+{"arm":"sc-facade-T5","event":"call","tool":"git_inspect","args":"{\"repo\":\"diverged\"}","nested":false,"callId":"call_00_KoN6o8Jt5Q7lz0xF3ktH5363","isError":false,"rootCallId":"call_00_KoN6o8Jt5Q7lz0xF3ktH5363"}

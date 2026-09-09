@@ -67,8 +67,9 @@ function New-Arm([string]$name, [string]$pluginDir, [string]$packageName) {
 }
 
 $arms = @(
-  @{ name = 'sc-facade'; dir = (Join-Path $PSScriptRoot 'facade-plugin');       package = 'dsh-scale-facade' },
-  @{ name = 'sc-exit';   dir = (Join-Path $PSScriptRoot 'facade-exit-plugin'); package = 'dsh-scale-facade-exit' }
+  @{ name = 'sc-facade'; dir = (Join-Path $PSScriptRoot 'facade-plugin');        package = 'dsh-scale-facade' },
+  @{ name = 'sc-exit';   dir = (Join-Path $PSScriptRoot 'facade-exit-plugin');   package = 'dsh-scale-facade-exit' },
+  @{ name = 'sc-signal'; dir = (Join-Path $PSScriptRoot 'facade-signal-plugin'); package = 'dsh-scale-facade-signal' }
 )
 $tasks = @(
   @{ id = 'T3'; text = 'Do not read any files. Using ONLY the capability pool: what is the title of document "report"? Answer with the title only.' },

@@ -1,0 +1,3 @@
+{"arm":"sc-signal-T4","event":"mount"}
+{"arm":"sc-signal-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_logs\",\"arguments\":{}}","nested":false,"callId":"call_00_jquycI4ZzjBjBpfK8mTG8762","isError":false,"rootCallId":"call_00_jquycI4ZzjBjBpfK8mTG8762"}
+{"arm":"sc-signal-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"default\"}","nested":false,"callId":"call_01_wWkT6du6okO5XtMC9MDn1163","isError":false,"rootCallId":"call_01_wWkT6du6okO5XtMC9MDn1163"}

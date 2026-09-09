@@ -1,0 +1,10 @@
+{"arm":"sc-facade-T3","event":"mount"}
+{"arm":"sc-facade-T3","event":"call","tool":"workspace_survey","args":"{\"path\":\"D:\\\\projects\\\\plugin tool\",\"pattern\":\"(?i)(title|document report|report)\"}","nested":false,"callId":"call_00_IPSdOUsra7bq9B6Fp8Ea5046","isError":false,"rootCallId":"call_00_IPSdOUsra7bq9B6Fp8Ea5046"}
+{"arm":"sc-facade-T3","event":"call","tool":"browser_inspect","args":"{}","nested":false,"callId":"call_00_08EaTPBJqSnpiPq3cAeh0221","isError":false,"rootCallId":"call_00_08EaTPBJqSnpiPq3cAeh0221"}
+{"arm":"sc-facade-T3","event":"call","tool":"glob","args":"{\"pattern\":\"**/*.{pdf,docx,doc,md,txt,html}\"}","nested":false,"callId":"call_00_eGNZltaGOvXi8CPW1QCz6253","isError":false,"rootCallId":"call_00_eGNZltaGOvXi8CPW1QCz6253"}
+{"arm":"sc-facade-T3","event":"call","tool":"db_explore","args":"{\"id\":\"default\",\"table\":\"documents\"}","nested":false,"callId":"call_00_ZPOY8y0bsEoXFp3jOrFs9864","isError":false,"rootCallId":"call_00_ZPOY8y0bsEoXFp3jOrFs9864"}
+{"arm":"sc-facade-T3","event":"call","tool":"cloud_inspect","args":"{\"service\":\"document-report\"}","nested":false,"callId":"call_01_voB6QNQFUvTRYtv19p8U7005","isError":false,"rootCallId":"call_01_voB6QNQFUvTRYtv19p8U7005"}
+{"arm":"sc-facade-T3","event":"call","tool":"git_inspect","args":"{\"repo\":\"D:\\\\projects\\\\plugin tool\"}","nested":false,"callId":"call_02_XBjil2YkmIzPLT5L7f2n4118","isError":false,"rootCallId":"call_02_XBjil2YkmIzPLT5L7f2n4118"}
+{"arm":"sc-facade-T3","event":"call","tool":"pdf_analyze","args":"{\"path\":\"document-report.pdf\"}","nested":false,"callId":"call_00_p0k1tK1kjCWeRhD9cFXe3246","isError":false,"rootCallId":"call_00_p0k1tK1kjCWeRhD9cFXe3246"}
+{"arm":"sc-facade-T3","event":"call","tool":"web_inspect","args":"{\"url\":\"https://example.com/document-report\"}","nested":false,"callId":"call_01_5d11V8KQw5xx9N5UeScu7283","isError":false,"rootCallId":"call_01_5d11V8KQw5xx9N5UeScu7283"}
+{"arm":"sc-facade-T3","event":"call","tool":"cloud_inspect","args":"{\"service\":\"document\"}","nested":false,"callId":"call_02_z0qpF4MraiPXwOlfFjAT6648","isError":false,"rootCallId":"call_02_z0qpF4MraiPXwOlfFjAT6648"}

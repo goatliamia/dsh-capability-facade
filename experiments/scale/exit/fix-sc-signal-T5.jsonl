@@ -1,0 +1,6 @@
+{"arm":"sc-signal-T5","event":"mount"}
+{"arm":"sc-signal-T5","event":"call","tool":"pool_primitive","args":"{\"name\":\"git_inspect\",\"arguments\":{\"repo\":\"diverged\"}}","nested":false,"callId":"call_00_MYVpApD2px6psUNX2FiX9365","isError":false,"rootCallId":"call_00_MYVpApD2px6psUNX2FiX9365"}
+{"arm":"sc-signal-T5","event":"call","tool":"pool_primitive","args":"{\"arguments\":{\"repo\":\"diverged\"},\"name\":\"repo_inspect\"}","nested":false,"callId":"call_00_mCaJ28j5HJtTcTFiLNMt8199","isError":false,"rootCallId":"call_00_mCaJ28j5HJtTcTFiLNMt8199"}
+{"arm":"sc-signal-T5","event":"call","tool":"pool_primitive","args":"{\"arguments\":{\"repo\":\"diverged\"},\"name\":\"repo\"}","nested":false,"callId":"call_01_XHWQ4PMW5bsHcUsNYVY28407","isError":false,"rootCallId":"call_01_XHWQ4PMW5bsHcUsNYVY28407"}
+{"arm":"sc-signal-T5","event":"call","tool":"pool_primitive","args":"{\"arguments\":{\"repo\":\"diverged\"},\"name\":\"git_status\"}","nested":false,"callId":"call_02_u1302i3LCoF1Sm7RKbcO3298","isError":false,"rootCallId":"call_02_u1302i3LCoF1Sm7RKbcO3298"}
+{"arm":"sc-signal-T5","event":"call","tool":"pool_primitive","args":"{\"arguments\":{\"repo\":\"diverged\"},\"name\":\"repo_status\"}","nested":false,"callId":"call_03_cVoYS9mCAFlVvsKSLWu56288","isError":false,"rootCallId":"call_03_cVoYS9mCAFlVvsKSLWu56288"}

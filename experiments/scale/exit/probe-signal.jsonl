@@ -1,0 +1,2 @@
+{"arm":"probe","event":"mount"}
+{"arm":"probe","event":"call","tool":"pdf_analyze","args":"{\"path\":\"report\"}","nested":false,"callId":"call_00_VxClChE1x1CZtdygqypO8581","isError":false,"rootCallId":"call_00_VxClChE1x1CZtdygqypO8581"}

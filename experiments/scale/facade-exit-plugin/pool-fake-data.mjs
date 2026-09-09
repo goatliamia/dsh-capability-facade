@@ -14,28 +14,42 @@
 
 const BASE = process.env.POOL_BASE_URL ?? 'http://127.0.0.1:8791'
 
+/**
+ * Resource id -> endpoint. The pool's ids are deliberately NOT filename-like
+ * (`doc-2f8a`, `repo-9c1e`): an earlier version used `report` / `locked`, and
+ * every arm kept treating them as filesystem paths (`report.pdf`, `report.md`),
+ * which turned a design question into an experiment artifact.
+ */
+const ENDPOINTS = {
+  'doc-2f8a': { group: 'report', suffix: '' },
+  'doc-7b31': { group: 'report', suffix: '/locked' },
+  'repo-9c1e': { group: 'repo', suffix: '' },
+  'repo-4d07': { group: 'repo', suffix: '/diverged' },
+}
+
+function endpointFor(group, id) {
+  const key = String(id ?? '').trim().toLowerCase()
+  const known = ENDPOINTS[key]
+  if (known !== undefined && known.group === group) return `/${group}${known.suffix}`
+  return key === '' || key === group ? `/${group}` : `/${group}/${key}`
+}
+
 /** Which endpoint a call should read, by tool name. */
 const ROUTES = [
-  [/^pdf_page_count$/, (args) => `/report${path(args.path)}`],
-  [/^pdf_metadata$/, (args) => `/report${path(args.path)}`],
-  [/^pdf_extract_text$/, (args) => `/report${path(args.path)}`],
-  [/^pdf_layout$/, (args) => `/report${path(args.path)}`],
-  [/^git_branch$/, (args) => `/repo${path(args.repo)}`],
-  [/^git_log$/, (args) => `/repo${path(args.repo)}`],
-  [/^git_status$/, (args) => `/repo${path(args.repo)}`],
-  [/^git_diff$/, (args) => `/repo${path(args.repo)}`],
-  [/^git_show$/, (args) => `/repo${path(args.repo)}`],
+  [/^pdf_page_count$/, (args) => endpointFor('report', args.path)],
+  [/^pdf_metadata$/, (args) => endpointFor('report', args.path)],
+  [/^pdf_extract_text$/, (args) => endpointFor('report', args.path)],
+  [/^pdf_layout$/, (args) => endpointFor('report', args.path)],
+  [/^git_branch$/, (args) => endpointFor('repo', args.repo)],
+  [/^git_log$/, (args) => endpointFor('repo', args.repo)],
+  [/^git_status$/, (args) => endpointFor('repo', args.repo)],
+  [/^git_diff$/, (args) => endpointFor('repo', args.repo)],
+  [/^git_show$/, (args) => endpointFor('repo', args.repo)],
   [/^db_query$/, () => '/logs'],
   [/^cloud_logs$/, () => '/logs'],
   [/^cloud_metrics$/, () => '/logs'],
   [/^fs_read$/, () => '/config'],
 ]
-
-/** Turn a tool argument into an endpoint path (`'diverged'` -> `/diverged`). */
-function path(value) {
-  const text = String(value ?? '').trim().replace(/^\/+/, '')
-  return text === '' ? '' : `/${text}`
-}
 
 async function fetchJson(endpoint) {
   const response = await fetch(`${BASE}${endpoint}`)
