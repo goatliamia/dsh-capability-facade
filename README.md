@@ -2,6 +2,19 @@
 
 中文 | [English](./README.en.md)
 
+> **状态（2026-09-09）：这个仓库现在是「参考实现 + 实验证据」，不是用户要安装的产品。**
+>
+> 八轮实验的结论：facade 是一个**窄而真**的优化（稳定组合 → 1 次调用、总 token −41%），
+> 但它**不能**收窄已经暴露的工具面（见下方约束），而且在没有稳定组合的插件上不值得做。
+> 因此**可复用的两件工具已迁入 [`dsh-plugin-maker`](https://github.com/goatliamia/dsh-plugin-maker)**：
+>
+> - `plugin_maker_surface` —— 只读工具面诊断（本仓 `lib/analyze.mjs` 的移植）；
+> - `scripts/verify-plugin.ps1` —— 隔离 profile 验证；
+> - 设计依据与证据：maker 的 `docs/why-facade-cannot-hide-tools.md`、`docs/surface-evidence.md`。
+>
+> 本仓保留：`ctx.capabilities` 服务 + 49 项权威断言（**语义参考实现**）、约束文档、以及
+> `experiments/`（原始数据，供复核）。完整结论见 [`experiments/FINAL-REPORT.md`](experiments/FINAL-REPORT.md)。
+
 > **DSH 的模型接口应该是"经过设计的、语义明确的 capability"，而不是一份工具清单。**
 > 这个仓库提供一个 seam：作者声明一个 capability，它的每个 operation 变成一个模型可见工具，
 > 内部按声明顺序、确定性地跑既有工具。

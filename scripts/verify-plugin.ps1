@@ -1,4 +1,4 @@
-# verify-plugin.ps1 — isolated verification of a local plugin (protocol step 5)
+# verify-plugin.ps1 鈥?isolated verification of a local plugin (protocol step 5)
 #
 # Creates a throwaway profile in $DSH_HOME/profiles/verify-<random>, composes
 # dsh-base + dsh-headless + the plugin under test, checks that the plugin row is
