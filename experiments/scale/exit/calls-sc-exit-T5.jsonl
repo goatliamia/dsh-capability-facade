@@ -1,0 +1,3 @@
+{"arm":"sc-exit-T5","event":"mount"}
+{"arm":"sc-exit-T5","event":"call","tool":"pool_primitive","args":"{\"name\":\"fs_tree\",\"arguments\":{\"path\":\"D:\\\\projects\\\\plugin tool\"}}","nested":false,"callId":"call_00_rz0rlRcQ8U1Z7Yju8m4m6970","isError":false,"rootCallId":"call_00_rz0rlRcQ8U1Z7Yju8m4m6970"}
+{"arm":"sc-exit-T5","event":"call","tool":"pool_primitive","args":"{\"name\":\"git_status\",\"arguments\":{\"repo\":\"diverged\"}}","nested":false,"callId":"call_01_tGQM7vp2aJDb15pHraVZ1915","isError":false,"rootCallId":"call_01_tGQM7vp2aJDb15pHraVZ1915"}

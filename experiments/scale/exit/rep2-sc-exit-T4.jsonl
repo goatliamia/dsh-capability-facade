@@ -1,0 +1,5 @@
+{"arm":"sc-exit-T4","event":"mount"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_services\",\"arguments\":{}}","nested":false,"callId":"call_00_tCZ1rfqsRL5xhoLZ9twl6822","isError":false,"rootCallId":"call_00_tCZ1rfqsRL5xhoLZ9twl6822"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_list_services\",\"arguments\":{}}","nested":false,"callId":"call_01_rH3v9Jl0CwycZ3ss49AJ9574","isError":false,"rootCallId":"call_01_rH3v9Jl0CwycZ3ss49AJ9574"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"arguments\":{},\"name\":\"cloud_logs\"}","nested":false,"callId":"call_00_xPssG2ANHqtvfxXzxfSb2818","isError":false,"rootCallId":"call_00_xPssG2ANHqtvfxXzxfSb2818"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"arguments\":{},\"name\":\"cloud_metrics\"}","nested":false,"callId":"call_01_rDxNKUICxIaZRS42VF4j5197","isError":false,"rootCallId":"call_01_rDxNKUICxIaZRS42VF4j5197"}

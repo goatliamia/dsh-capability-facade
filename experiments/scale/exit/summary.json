@@ -1,0 +1,50 @@
+﻿[
+    {
+        "arm":  "sc-facade",
+        "task":  "T3",
+        "calls":  32,
+        "errors":  0,
+        "tools":  "browser_fill,browser_inspect,cloud_inspect,cloud_publish,db_backup,db_explore,git_inspect,image_analyze,image_transform,pdf_analyze,pdf_convert,web_fetch,web_inspect,web_search,workspace_archive,workspace_survey",
+        "answer":  "The only capability that returned any data was cloud, and it contains no report title. I w"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T4",
+        "calls":  null,
+        "errors":  0,
+        "tools":  "cloud_inspect",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-facade",
+        "task":  "T5",
+        "calls":  4,
+        "errors":  0,
+        "tools":  "git_inspect,workspace_survey",
+        "answer":  "Yes — the `diverged` repo (branch `feature/x` @ `abc1234`) is dirty (`lib/index.js` modifi"
+    },
+    {
+        "arm":  "sc-exit",
+        "task":  "T3",
+        "calls":  76,
+        "errors":  0,
+        "tools":  "browser_inspect,cloud_inspect,db_explore,git_inspect,image_analyze,pdf_analyze,pool_primitive,web_inspect,workspace_survey",
+        "answer":  "report.pdf\r"
+    },
+    {
+        "arm":  "sc-exit",
+        "task":  "T4",
+        "calls":  null,
+        "errors":  0,
+        "tools":  "pool_primitive",
+        "answer":  "1\r"
+    },
+    {
+        "arm":  "sc-exit",
+        "task":  "T5",
+        "calls":  2,
+        "errors":  0,
+        "tools":  "pool_primitive",
+        "answer":  "Dirty: yes — the `diverged` repo (branch `feature/x`) has uncommitted changes (`lib/index."
+    }
+]

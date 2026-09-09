@@ -1,0 +1,2 @@
+{"arm":"sc-facade-T4","event":"mount"}
+{"arm":"sc-facade-T4","event":"call","tool":"cloud_inspect","args":"{\"service\":\"api\"}","nested":false,"callId":"call_00_hgPWQXSKPBz6ilWVBqYo1400","isError":false,"rootCallId":"call_00_hgPWQXSKPBz6ilWVBqYo1400"}

@@ -1,0 +1,2 @@
+{"arm":"sc-exit-T4","event":"mount"}
+{"arm":"sc-exit-T4","event":"call","tool":"pool_primitive","args":"{\"name\":\"cloud_logs\",\"arguments\":{}}","nested":false,"callId":"call_00_VRhoCdTqVCDruocpww8Y7172","isError":false,"rootCallId":"call_00_VRhoCdTqVCDruocpww8Y7172"}

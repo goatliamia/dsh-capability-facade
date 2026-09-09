@@ -1,0 +1,10 @@
+﻿{
+  "name": "dsh-scale-facade-exit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experiment arm 'facade+exit': 15 semantic operations plus one escape hatch to reach any primitive.",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": { ".": "./index.mjs", "./package.json": "./package.json" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
