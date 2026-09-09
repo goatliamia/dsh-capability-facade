@@ -289,6 +289,20 @@ pwsh -File experiments/ab-make/ab-make.ps1
 报告（含一条作者最易犯的接线错：**声明了参数 ≠ 参数会流到步骤**）：
 [`experiments/scale/MULTI-TASK-REPORT.md`](experiments/scale/MULTI-TASK-REPORT.md)。
 
+### 8. 出口实验：不覆盖时能退出吗
+
+给 facade 臂加一个逃生口（`pool_primitive`，按名调用任意原语），与"封闭世界"对照：
+
+| 任务 | 封闭臂 | 有出口臂 |
+| --- | --- | --- |
+| T3 标题（操作不覆盖） | 32 次且**答错**（另两次 37/70 次蒙对） | 47–220 次，**总是答对** |
+| T4 日志 ERROR | **1 次**（`cloud_inspect` 恰好返回了日志载荷） | 2–4 次 |
+| T5 覆盖任务 | 4 次 | **2 次** |
+
+**结论**：出口把"无解"变成"有解"，但**模型不会自动用它**——它先挨个试 15 个操作，很晚才想到出口。
+另一个反直觉发现：T4 说明"操作不覆盖"是**作者的假设、不是事实**（按名字判断覆盖会判错）。
+报告：[`experiments/scale/EXIT-REPORT.md`](experiments/scale/EXIT-REPORT.md)。
+
 ## 仓库结构
 
 | 路径 | 内容 |
