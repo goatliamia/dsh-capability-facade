@@ -1,0 +1,17 @@
+{
+    "name":  "dsh-token-measure",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "Test-only: report tool-schema tokens and session surface tokens via ctx.tokenMeter.",
+    "type":  "module",
+    "main":  "index.mjs",
+    "exports":  {
+                    ".":  "./index.mjs",
+                    "./package.json":  "./package.json"
+                },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           }
+            }
+}

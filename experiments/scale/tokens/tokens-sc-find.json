@@ -1,0 +1,11 @@
+{
+ "arm": "sc-find",
+ "toolCount": 41,
+ "toolSchemaBytes": 33334,
+ "toolSchemaTokensApprox": 8334,
+ "surfaceTokens": 2347,
+ "totalTokens": 12241,
+ "surfaceDeltaTokens": 485,
+ "logRevision": 29,
+ "nodeCount": 9
+}

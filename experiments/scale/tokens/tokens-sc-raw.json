@@ -1,0 +1,11 @@
+{
+ "arm": "sc-raw",
+ "toolCount": 182,
+ "toolSchemaBytes": 54310,
+ "toolSchemaTokensApprox": 13578,
+ "surfaceTokens": 576,
+ "totalTokens": 15335,
+ "surfaceDeltaTokens": 0,
+ "logRevision": 15,
+ "nodeCount": 3
+}

@@ -1,0 +1,11 @@
+{
+ "arm": "sc-search",
+ "toolCount": 27,
+ "toolSchemaBytes": 26680,
+ "toolSchemaTokensApprox": 6670,
+ "surfaceTokens": 1166,
+ "totalTokens": 9017,
+ "surfaceDeltaTokens": 251,
+ "logRevision": 27,
+ "nodeCount": 8
+}

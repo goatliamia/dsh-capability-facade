@@ -1,0 +1,42 @@
+﻿[
+    {
+        "arm":  "sc-raw",
+        "tools":  182,
+        "schemaBytes":  54310,
+        "schemaTokensApprox":  13578,
+        "surfaceTokens":  576,
+        "totalTokens":  15335,
+        "calls":  0,
+        "ans":  "2\r"
+    },
+    {
+        "arm":  "sc-search",
+        "tools":  27,
+        "schemaBytes":  26680,
+        "schemaTokensApprox":  6670,
+        "surfaceTokens":  1166,
+        "totalTokens":  9017,
+        "calls":  0,
+        "ans":  "2\r"
+    },
+    {
+        "arm":  "sc-facade",
+        "tools":  40,
+        "schemaBytes":  31040,
+        "schemaTokensApprox":  7760,
+        "surfaceTokens":  576,
+        "totalTokens":  9517,
+        "calls":  0,
+        "ans":  "2\r"
+    },
+    {
+        "arm":  "sc-find",
+        "tools":  41,
+        "schemaBytes":  33334,
+        "schemaTokensApprox":  8334,
+        "surfaceTokens":  2347,
+        "totalTokens":  12241,
+        "calls":  0,
+        "ans":  "2\r"
+    }
+]

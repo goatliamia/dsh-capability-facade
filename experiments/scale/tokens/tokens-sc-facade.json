@@ -1,0 +1,11 @@
+{
+ "arm": "sc-facade",
+ "toolCount": 40,
+ "toolSchemaBytes": 31040,
+ "toolSchemaTokensApprox": 7760,
+ "surfaceTokens": 576,
+ "totalTokens": 9517,
+ "surfaceDeltaTokens": 0,
+ "logRevision": 15,
+ "nodeCount": 3
+}
